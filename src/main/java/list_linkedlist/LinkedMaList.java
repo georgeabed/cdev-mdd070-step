@@ -1,5 +1,7 @@
 package list_linkedlist;
 
+import java.util.Iterator;
+
 public class LinkedMaList implements MaList {
 
     private Node first = null;
@@ -35,6 +37,12 @@ public class LinkedMaList implements MaList {
 
     @Override
     public String get(int position) {
+        // TODO
+        return null;
+    }
+
+    @Override
+    public Iterator<String> iterator() {
         // TODO
         return null;
     }

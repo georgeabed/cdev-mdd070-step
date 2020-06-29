@@ -1,5 +1,7 @@
 package list_linkedlist;
 
+import java.util.Iterator;
+
 public class ArrayMaList implements MaList {
 
     private String[] array = new String[10];
@@ -7,7 +9,6 @@ public class ArrayMaList implements MaList {
 
     @Override
     public void add(String valeur) {
-        // TODO agrandir le tableau
         if (this.size >= this.array.length) {
             String[] newArray = new String[this.size * 2];
 
@@ -36,5 +37,11 @@ public class ArrayMaList implements MaList {
     @Override
     public String get(int position) {
         return this.array[position];
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        // TODO
+        return null;
     }
 }
