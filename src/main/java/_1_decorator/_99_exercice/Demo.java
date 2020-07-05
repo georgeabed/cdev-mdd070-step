@@ -14,9 +14,9 @@ public class Demo {
         String encryptedAndCompressed = compressor.compress(encrypted);
         fileDataSource.writeData(encryptedAndCompressed);
 
-        //TODO refactoriser en utilisant le pattern decorator
-
         String readData = fileDataSource.readData();
+
+
 
         System.out.println("- Input ----------------");
         System.out.println(salaryRecords);

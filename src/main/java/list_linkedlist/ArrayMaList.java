@@ -1,5 +1,9 @@
 package list_linkedlist;
 
+
+import list_linkedlist.avecpattern.ArrayMaListIterator;
+import list_linkedlist.avecpattern.ArrayMaListIteratorInverse;
+
 import java.util.Iterator;
 
 public class ArrayMaList implements MaList {
@@ -31,7 +35,13 @@ public class ArrayMaList implements MaList {
 
     @Override
     public void add(int position, String valeur) {
-        // TODO
+            String arrayValeur = array[position];
+            if(arrayValeur == null){
+                array[position] = valeur;
+                size++;
+            } else {
+                array[position] = valeur;
+            }
     }
 
     @Override
@@ -41,7 +51,11 @@ public class ArrayMaList implements MaList {
 
     @Override
     public Iterator<String> iterator() {
-        // TODO
-        return null;
+        return new ArrayMaListIterator(this);
+    }
+
+
+    public Iterator<String> iteratorInverse() {
+        return new ArrayMaListIteratorInverse(this);
     }
 }
